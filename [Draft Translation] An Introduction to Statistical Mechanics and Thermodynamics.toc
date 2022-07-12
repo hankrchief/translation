@@ -1,0 +1,79 @@
+\contentsline {section}{目录}{2}{section*.1}%
+\contentsline {section}{\numberline {0}译者的话}{5}{section.0}%
+\contentsline {section}{\numberline {1}前言}{6}{section.1}%
+\contentsline {subsection}{\numberline {1.1}热物理学}{6}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}问题有哪些？}{6}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}历史}{7}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}基本概念与假设}{8}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}状态函数}{8}{subsubsection.1.4.1}%
+\contentsline {subsubsection}{\numberline {1.4.2}不可逆性}{8}{subsubsection.1.4.2}%
+\contentsline {subsubsection}{\numberline {1.4.3}熵}{9}{subsubsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.5}本书概况}{9}{subsection.1.5}%
+\contentsline {section}{第I部分\hskip 1em\relax 熵}{10}{section*.2}%
+\contentsline {section}{\numberline {2}经典理想气体}{10}{section.2}%
+\contentsline {subsection}{\numberline {2.1}理想气体}{10}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}经典气体的相空间}{10}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}可区分性}{11}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}概率论}{11}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}玻尔兹曼对于熵的定义}{12}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}$S=klogW$}{12}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}位置与动量的独立性}{12}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}第I部分概览}{12}{subsection.2.8}%
+\contentsline {section}{\numberline {3}离散概率理论}{14}{section.3}%
+\contentsline {subsection}{\numberline {3.1}什么是概率？}{14}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}离散随机变量与概率}{15}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}多维随机变量的概率理论}{16}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}边缘概率与条件概率}{16}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}独立变量}{17}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}两两独立与相互独立}{17}{subsubsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.4}随机数与随机变量的函数}{17}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}平均值，方差与标准差}{19}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}相关函数}{20}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}一组独立的随机数}{20}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}二项分布}{21}{subsection.3.8}%
+\contentsline {subsubsection}{\numberline {3.8.1}二项分布的导出}{22}{subsubsection.3.8.1}%
+\contentsline {subsubsection}{\numberline {3.8.2}二项式系数的有用性质}{22}{subsubsection.3.8.2}%
+\contentsline {subsection}{\numberline {3.9}二项分布的高斯近似}{23}{subsection.3.9}%
+\contentsline {subsection}{\numberline {3.10}关于高斯积分的一些偏题}{24}{subsection.3.10}%
+\contentsline {subsection}{\numberline {3.11}对于$N!$的斯特林近似}{24}{subsection.3.11}%
+\contentsline {subsubsection}{\numberline {3.11.1}斯特林近似的最简单形式}{24}{subsubsection.3.11.1}%
+\contentsline {subsubsection}{\numberline {3.11.2}斯特林近似的一个更佳的形式}{25}{subsubsection.3.11.2}%
+\contentsline {subsubsection}{\numberline {3.11.3}高斯帕近似}{26}{subsubsection.3.11.3}%
+\contentsline {subsubsection}{\numberline {3.11.4}斯特林公式的应用}{26}{subsubsection.3.11.4}%
+\contentsline {subsection}{\numberline {3.12}应用斯特林近似的二项分布}{27}{subsection.3.12}%
+\contentsline {subsection}{\numberline {3.13}多项分布}{27}{subsection.3.13}%
+\contentsline {subsection}{\numberline {3.14}习题}{28}{subsection.3.14}%
+\contentsline {section}{\numberline {4}经典理想气体：位形熵}{34}{section.4}%
+\contentsline {subsection}{\numberline {4.1}将熵分为两个部分}{34}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}粒子的概率分布}{34}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}两个曾处于平衡的孤立系统中的粒子分布}{35}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}二项分布的结果}{36}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}实际值与平均值}{36}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}“热力学极限”}{37}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}概率与熵}{37}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}对于$M\geq 2$的系统的推广}{39}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}位形熵的分析形式近似}{40}{subsection.4.9}%
+\contentsline {subsection}{\numberline {4.10}习题}{40}{subsection.4.10}%
+\contentsline {section}{\numberline {5}连续随机变量}{41}{section.5}%
+\contentsline {subsection}{\numberline {5.1}连续骰子与概率密度}{41}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}概率密度}{41}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}狄拉克$\delta $ 函数}{43}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}狄拉克$\delta $函数的定义}{43}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}$\delta $函数的积分}{44}{subsubsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.3}$f(x)$乘$\delta $函数的积分}{44}{subsubsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.4}连续随机变量的变换}{46}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}两个随机数之和}{46}{subsubsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.5}贝叶斯定理}{47}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}习题}{48}{subsection.5.6}%
+\contentsline {section}{\numberline {6}经典理想气体：能量熵}{53}{section.6}%
+\contentsline {subsection}{\numberline {6.1}两个子系统的能量分布}{53}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}对于$\Omega _p$的计算}{54}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}利用被积函数的球对称性}{54}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}$n$维球的表面积}{55}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}$\Omega _p$的准确表达}{56}{subsubsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.4}两个曾处于平衡的孤立子系统中的能量分布}{56}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}$N$为大数时的概率分布}{56}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}概率分布的对数与熵中能量相关的部分}{58}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}对于$M\geq 2$的系统的推广}{59}{subsection.6.7}%
+\contentsline {section}{\numberline {7}经典气体：理想或不然}{60}{section.7}%
+\contentsline {subsection}{\numberline {7.1}经典理想气体复合系统的熵}{60}{subsection.7.1}%
