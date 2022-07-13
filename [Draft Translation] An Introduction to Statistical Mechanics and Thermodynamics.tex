@@ -1214,7 +1214,7 @@
         \left\langle N_{k}\right\rangle=N_{T, j k}\left(\frac{V_{k}}{V_{T, j k}}\right)
     \end{equation}
     所以：
-    \begin{equation}
+    \begin{equation}\label{eq4.8}
         \frac{\left\langle N_{j}\right\rangle}{V_{j}}=\frac{\left\langle N_{k}\right\rangle}{V_{k}}=\frac{N_{T, j k}}{V_{T, j k}} .
     \end{equation}
     $N_j$概率分布的宽度由标准差给出，如式(\ref{eq3.43})：
@@ -2216,7 +2216,7 @@
             \end{aligned}
     \end{equation}
     这就给出了平衡条件，这个条件在热力学的导出中起到了很重要的作用，
-    \begin{equation}
+    \begin{equation}\label{eq7.5}
         \frac{\partial S_{j}}{\partial E_{j}}=\frac{\partial S_{k}}{\partial E_{k}} .
     \end{equation}
     因为熵对于能量的偏导为：
@@ -2228,13 +2228,110 @@
             \end{aligned}
     \end{equation}
     我们便预测平衡条件为：
-    \begin{equation}
+    \begin{equation}\label{eq7.7}
         \frac{E_{j}}{N_{j}}=\frac{E_{k}}{N_{k}}
     \end{equation}
     这与式\ref{eq6.26}中的平衡条件相同。
     \subsubsection{粒子数的平衡条件}
 
+    我们现在证明，我们对于熵的表达式正确地预测了每个子系统中粒子数的平衡值。考虑一个具有固定子体积$V_j$和$V_k$的复合系统的实验。粒子总数为$N_{T,jk}$，但两个子体积之间的壁上有一个孔，因此它们可以交换能量和粒子。复合系统中粒子的总能量为$E_{T,jk}$。
 
+    由于这两个子系统可以交换粒子，它们当然可以交换能量。上一小节中的推导仍然有效，因此熵在能量平衡值处正确地取得了最大值；也就是说，两个子系统中平均每个粒子的能量相同。
+
+    现在我们想要找到关于$N_j$的熵的最大值，以确认它取在$N_j$和$N_k=N_{T,jk-N_j}$的平衡值处。我们用传统的方法求最大值，即将关于$N_j$的偏导数设为零，
+    \begin{equation}
+        \begin{aligned}
+            \frac{\partial}{\partial N_{j}} S\left(E_{j}, V_{j}, N_{j} ; E_{k}, V_{j}, N_{T, j k}-N_{j}\right) &=\frac{\partial}{\partial N_{j}}\left[S_{j}\left(E_{j}, V_{j}, N_{j}\right)+S_{k}\left(E_{k}, V_{k}, N_{T, j k}-N_{j}\right)\right] \\
+            &=\frac{\partial}{\partial N_{j}} S_{j}\left(E_{j}, V_{j}, N_{j}\right)+\frac{\partial N_{k}}{\partial N_{j}} \frac{\partial}{\partial N_{k}} S_{k}\left(E_{k}, V_{k}, N_{k}\right) \\
+            &=\frac{\partial}{\partial N_{j}} S_{j}\left(E_{j}, V_{j}, N_{j}\right)-\frac{\partial}{\partial N_{k}} S_{k}\left(E_{k}, V_{k}, N_{k}\right) \\
+            &=0 .
+            \end{aligned}
+    \end{equation}
+    这就给出了另一个平衡条件，其与式(\ref{eq7.5})对应，也在热力学中十分重要：
+    \begin{equation}
+        \frac{\partial S_{j}}{\partial N_{j}}=\frac{\partial S_{k}}{\partial N_{k}}
+    \end{equation}
+    熵关于$N_j$的偏导数十分复杂：
+    \begin{equation}
+        \begin{aligned}
+            \frac{\partial S}{\partial N_{j}} &=\frac{\partial}{\partial N_{j}}\left[k N_{j}\left[\frac{3}{2} \ln \left(\frac{E_{j}}{N_{j}}\right)+\ln \left(\frac{V_{j}}{N_{j}}\right)+X\right]\right] \\
+            &=k\left[\frac{3}{2} \ln \left(\frac{E_{j}}{N_{j}}\right)+\ln \left(\frac{V_{j}}{N_{j}}\right)+X\right]+k N_{j} \frac{\partial}{\partial N_{j}}\left[\frac{3}{2} \ln \left(\frac{E_{j}}{N_{j}}\right)+\ln \left(\frac{V_{j}}{N_{j}}\right)+X\right.\\
+            &=k\left[\frac{3}{2} \ln \left(\frac{E_{j}}{N_{j}}\right)+\ln \left(\frac{V_{j}}{N_{j}}\right)+X\right]+k N_{j}\left[-\frac{3}{2 N_{j}}-\frac{1}{N_{j}}\right] \\
+            &=k\left[\frac{3}{2} \ln \left(\frac{E_{j}}{N_{j}}\right)+\ln \left(\frac{V_{j}}{N_{j}}\right)+X\right]-\frac{5}{2} k .
+            \end{aligned}
+    \end{equation}
+    为计算平衡条件，取两个子系统中对于粒子数的偏导相等：
+    \begin{equation}\label{eq7.11}
+        k\left[\frac{3}{2} \ln \left(\frac{E_{j}}{N_{j}}\right)+\ln \left(\frac{V_{j}}{N_{j}}\right)+X\right]-\frac{5}{2} k=k\left[\frac{3}{2} \ln \left(\frac{E_{k}}{N_{k}}\right)+\ln \left(\frac{V_{k}}{N_{k}}\right)+X\right]-\frac{5}{2} k .
+    \end{equation}
+    因为能量也处于平衡态，所以式(\ref{eq7.7})也成立：
+    \begin{equation}\label{eq7.12}
+        \frac{E_{j}}{N_{j}}=\frac{E_{k}}{N_{k}}
+    \end{equation}
+    结合式(\ref{eq7.11})与式(\ref{eq7.12})，我们就能得到关于$N_j$的平衡条件：
+    \begin{equation}
+        \frac{N_{j}}{V_{j}}=\frac{N_{k}}{V_{k}} .
+    \end{equation}
+    就像式(\ref{eq4.8})所预料的一样，每个子系统中单位体积的粒子数是相同的。
+
+    \subsection{熵的体积依赖}
+    我们在式(\ref{eq7.2})中导出的经典理想气体熵表达式的一个有趣而重要的特征是，它还正确地预测了我们尚未讨论的一类实验的结果。
+
+    考虑一个两端封闭的圆柱体，其中含有理想气体。中间有一个自由移动的隔板，称为活塞，将气体分为两个子系统。活塞由透热材料制成，因此它可以在两个系统之间传递能量，但不能透过粒子。活塞一侧有$N_j$个粒子，另一侧有$N_k$个粒子。由于活塞可以自由移动，尽管总体积$V_{T,jk}=V_j+V_k$是固定的，但子系统的体积可以改变。
+
+    因为活塞可以导热，每个粒子平均的能量在活塞两侧便是相同的，就像第\ref{chap6}章所导出的那样：
+    \begin{equation}
+        \frac{\left\langle E_{j}\right\rangle}{N_{j}}=\frac{\left\langle E_{k}\right\rangle}{N_{k}}
+    \end{equation}
+    熵的最大值与活塞位置的关系也可以通过取熵对于$V_j$的偏导为$0$得到：
+    \begin{equation}
+        \begin{aligned}
+            \frac{\partial}{\partial V_{j}} S\left(E_{j}, V_{j}, N_{j} ; E_{k}, V_{T, j k}-V_{j}, N_{k}\right) &=\frac{\partial}{\partial V_{j}}\left[S_{j}\left(E_{j}, V_{j}, N_{j}\right)+S_{k}\left(E_{k}, V_{T, j k}-V_{j}, N_{k}\right)\right] \\
+            &=\frac{\partial}{\partial V_{j}} S_{j}\left(E_{j}, V_{j}, N_{j}\right)+\frac{\partial V_{k}}{\partial V_{j}} \frac{\partial}{\partial V_{k}} S_{k}\left(E_{k}, V_{k}, N_{k}\right) \\
+            &=\frac{\partial}{\partial V_{j}} S_{j}\left(E_{j}, V_{j}, N_{j}\right)-\frac{\partial}{\partial V_{k}} S_{k}\left(E_{k}, V_{k}, N_{k}\right) \\
+            &=0 .
+            \end{aligned}
+    \end{equation}
+    这便给出了类似于之前导出形式的平衡条件：
+    \begin{equation}
+        \frac{\partial S_{j}}{\partial V_{j}}=\frac{\partial S_{k}}{\partial V_{k}}
+    \end{equation}
+    因为熵对于体积的偏导为：
+    \begin{equation}
+        \begin{aligned}
+            \frac{\partial S_{j}}{\partial V_{j}}&=k N \frac{\partial}{\partial V_{j}}\left[\frac{3}{2} \ln \left(\frac{E_{j}}{N_{j}}\right)+\ln \left(\frac{V_{j}}{N_{j}}\right)+X\right]
+            &=k N_{j} \frac{\partial}{\partial V_{j}} \ln \left(\frac{V_{j}}{N_{j}}\right) \\
+            &=\frac{k N_{j}}{V_{j}}
+        \end{aligned}
+    \end{equation}
+    平衡条件下，粒子密度在每个子系统下也是相同的，这与预测相符：
+    \begin{equation}
+        \frac{N_{j}}{V_{j}}=\frac{N_{k}}{V_{k}} .
+    \end{equation}
+    怎么会这样？当然知道这是对的非常令人欣慰，但为什么相对于活塞位置的最大熵会产生正确的平衡体积？通过计算活塞位置的概率分布可以得到答案。
+
+    在通常假设所有构型的可能性相同（在约束下）的情况下，粒子位置和活塞位置的联合概率密度应为常数，我们将其表示为$Y$，
+    \begin{equation}
+        P\left(V_{j},\left\{\vec{r}_{1, i} \mid i=1, \ldots, N_{j}\right\},\left\{\vec{r}_{2, j} \mid j=1, \ldots, N_{k}\right\}\right)=Y
+        \end{equation}
+    为了找到$P(V_j)$的边缘概率，我们简单地关于每个粒子的位置积分，并注意到$N_j$个粒子被限制于体积$V_j$，且$N_k$个粒子被限制于体积$V_k$，
+        \begin{equation}
+            \begin{aligned}
+            P\left(V_{j}\right) &=\int_{p_{j}, p_{k}} P\left(V_{j},\left\{\vec{r}_{1, i} \mid i=1, \ldots, N_{j}\right\},\left\{\vec{r}_{2, j} \mid j=1, \ldots, N_{k}\right\}\right) d^{3 N_{j}} r_{j} d^{3 N_{j}} r_{k} \\
+            &=Y V_{j}^{N_{j}} V_{k}^{N_{k}}
+            \end{aligned}
+            \end{equation}
+    为了找到$P(V_j)$在条件$V_k=V_{T,jk}-V_j$下的最大值，我们关于$V_j$求导，并使其等于$0$，
+    \begin{equation}\label{eq7.21}
+        \frac{\partial}{\partial V_{j}} P\left(V_{j}\right)=Y N_{j} V_{j}^{N_{j}-1} V_{k}^{N_{k}}-Y N_{k} V_{j}^{N_{j}}\left(V_{T, j k}-V_{j}\right)^{N_{k}-1}=0
+        \end{equation}
+    解式(\ref{eq7.21})，我们得到了预期的结果：
+    \begin{equation}
+        \frac{N_{j}}{V_{j}}=\frac{N_{k}}{V_{k}} .
+        \end{equation}
+    关键点在于$P(V_j)$的体积依赖性的对数与熵的对数完全相同。在每种情况下，将熵定义为概率的对数（在加法和乘法常数范围内）都会给出正确答案。
+    \subsection{非对称活塞}
+    
 
 
 
