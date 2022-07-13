@@ -68,12 +68,18 @@
 \contentsline {section}{\numberline {6}经典理想气体：能量熵}{53}{section.6}%
 \contentsline {subsection}{\numberline {6.1}两个子系统的能量分布}{53}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}对于$\Omega _p$的计算}{54}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}利用被积函数的球对称性}{54}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}$n$维球的表面积}{55}{subsubsection.6.3.1}%
-\contentsline {subsubsection}{\numberline {6.3.2}$\Omega _p$的准确表达}{56}{subsubsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.4}两个曾处于平衡的孤立子系统中的能量分布}{56}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}$N$为大数时的概率分布}{56}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}概率分布的对数与熵中能量相关的部分}{58}{subsection.6.6}%
-\contentsline {subsection}{\numberline {6.7}对于$M\geq 2$的系统的推广}{59}{subsection.6.7}%
+\contentsline {subsubsection}{\numberline {6.2.1}利用被积函数的球对称性}{54}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}$n$维球的表面积}{55}{subsubsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.3}$\Omega _p$的准确表达}{56}{subsubsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.3}两个曾处于平衡的孤立子系统中的能量分布}{56}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}$N$为大数时的概率分布}{56}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}概率分布的对数与熵中能量相关的部分}{58}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}对于$M\geq 2$的系统的推广}{59}{subsection.6.6}%
 \contentsline {section}{\numberline {7}经典气体：理想或不然}{60}{section.7}%
 \contentsline {subsection}{\numberline {7.1}经典理想气体复合系统的熵}{60}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}理想气体中的平衡条件}{60}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}能量的平衡条件}{60}{subsubsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2}粒子数的平衡条件}{61}{subsubsection.7.2.2}%
+\contentsline {section}{\numberline {8}温度，压强，化学式以及其他}{61}{section.8}%
+\contentsline {section}{第II部分\hskip 1em\relax 热力学}{61}{section*.11}%
+\contentsline {section}{\numberline {9}热力学定律与假设}{61}{section.9}%
