@@ -81,6 +81,8 @@
 \contentsline {subsubsection}{\numberline {7.2.1}能量的平衡条件}{60}{subsubsection.7.2.1}%
 \contentsline {subsubsection}{\numberline {7.2.2}粒子数的平衡条件}{61}{subsubsection.7.2.2}%
 \contentsline {subsection}{\numberline {7.3}熵的体积依赖}{62}{subsection.7.3}%
-\contentsline {section}{\numberline {8}温度，压强，化学式以及其他}{64}{section.8}%
-\contentsline {section}{第II部分\hskip 1em\relax 热力学}{65}{section*.11}%
-\contentsline {section}{\numberline {9}热力学定律与假设}{65}{section.9}%
+\contentsline {subsection}{\numberline {7.4}非对称活塞}{64}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}不可分辨的粒子}{64}{subsection.7.5}%
+\contentsline {section}{\numberline {8}温度，压强，化学式以及其他}{65}{section.8}%
+\contentsline {section}{第II部分\hskip 1em\relax 热力学}{66}{section*.11}%
+\contentsline {section}{\numberline {9}热力学定律与假设}{66}{section.9}%
