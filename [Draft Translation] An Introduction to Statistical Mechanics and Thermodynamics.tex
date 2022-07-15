@@ -130,7 +130,7 @@
 
     本书的\hyperref[part1]{第I部分}致力于根据玻尔兹曼的定义，对熵的概念进行直观理解。我们将对于一个简单的模型提供一个明确且详细的熵的推导，以深入了解其意义。本书的后面部分将使用更复杂的工具来研究热力学和统计力学，但其都是基于玻尔兹曼对熵的定义。
 
-    \subsection{基本概念与假设}
+    \subsection{基本概念与假设}\label{sec1.4}
     这本书有关多粒子系统的宏观行为。这是一个很宽泛的话题，因为我们身边的万事万物都包含着巨量的分子与原子。甚至在相对小的物体中，也有着$10^{20}$或更多个原子。
 
     原子与分子并不是系统中所包含粒子的唯一例子。例如胶体中可以包含$10^{12}$或更多个悬浮在液体中的粒子。典型胶体中巨量的粒子也意味着其可以良好地用统计力学描述。
@@ -846,7 +846,6 @@
     \end{equation}
     从表(\ref{table3.4})可以看出，式(\ref{eq3.72})相较式(\ref{eq3.63})有着巨大的提升。
     \begin{mdframed}[backgroundcolor=lightgray,hidealllines=true]
-    
         本节中通过高斯函数近似一个快速达到峰值的函数的方法在统计力学中极其普遍，因为我们遇到的很多函数都具有这样的性质。
     \end{mdframed}
     \begin{table}[H]
@@ -2347,6 +2346,120 @@
     不可区分性的第一个结果是，必须消除用于表示两个子系统之间粒子排列的二项式系数。由于粒子无法区分，因此交换粒子产生的微观状态数等于1。
 
     第二个结果就是式(\ref{eq4.4})中的因子$\left(V_{j} / V\right)^{N_{j}}\left(1-V_{j} / V\right)^{N_{T, j k}-N_{j}}$也需要修改。
+
+    考虑我们的基本假设，即粒子位置的概率密度必须是常数，且常数的值由概率密度归一化为1的条件确定。
+
+    对于三维体积$V_j$中$N_j$个不可分辨的粒子，概率密度很明显是$V_j^{-N_j}$。在子体积$V_j$中找到特定$N_j$个粒子，剩下的在子体积$V_k$中的概率就是$V_{j}^{N_{j}} V_{k}^{N_{T, j k}-N_{j}} V_{T, j k}^{-N_{T, j k}}$。
+
+    然而，对于不可区分粒子的计算有所不同。我们不能以能够区分单个粒子的方式来标记它们。然而，我们可以根据粒子的位置来标记粒子。如果两个粒子交换，它们的标签也会交换，从而导致状态不变。实现这一点的一个简单方法是引入三维笛卡尔坐标系，并按其$x$坐标顺序标记粒子；
+    也就是说，对于任何微观状态，对粒子进行标记，使子系统$j$中$x_{j,i}<x_{j,i+1}$，子系统$k$中$x_{k,l}<x_{k,l+1}$。为简单起见，我们假设子系统为矩形，边缘平行于坐标轴。$x$方向上子系统的长度为$L_j$和$L_k$，相应的面积为$A_j$和$A_k$，因此体积由$V_j=A_jL_j$和$V_k=A_kL_k$给出。
+
+    我们会按照第\ref{chap4}章和第\ref{chap6}章的方法，并假设坐标空间中概率分布为常数，我们记为$Y(N_{T,jk},V_{T,jk})$，
+    \begin{equation}
+        P\left(\left\{\vec{r}_{j, i}\right\},\left\{\vec{r}_{k \ell}\right\}\right)=Y\left(N_{T, j k}, V_{T, j k}\right)
+    \end{equation}
+    在子体积$V_j$中找到$N_j$个粒子，在$V_k$中找到$N_k=N_{T,jk}-N_j$个粒子的概率就是对于整个坐标空间积分的结果。对于$y$与$z$方向的积分仅仅给出了两个子系统的横截面积。$x$方向的积分必须要依次进行，条件为$x_{j,i}<x_{j,i+1}$且$x_{k,l}<x_{k,l+q}$：
+    \begin{equation}\label{eq7.24}
+        \begin{aligned}
+            P\left(N_{j}, N_{k}\right)=& Y\left(N_{T, j k}, V_{T, j k}\right) A_{j}^{N_{j}} A_{k}^{N_{k}} \int_{0}^{L_{j}} d x_{j, N_{j}} \int_{0}^{x_{j, N_{j}}} d x_{j, N_{j}-1} \cdots \int_{0}^{x_{k}} d x_{j, 1} \\
+            & \times \int_{0}^{L_{k}} d x_{k, N_{k}}^{\prime} \int_{0}^{x_{k, N_{k}}^{\prime}} d x_{k, N_{k}-1}^{\prime} \cdots \int_{0}^{x_{k}^{\prime}} d x_{k, 1}^{\prime} .
+            \end{aligned}
+    \end{equation}
+    我用上面加一个撇来表示子系统$k$中对于$x$方向的积分。
+
+    式(\ref{eq7.24})中的积分很容易通过迭代得到：
+    \begin{equation}\label{eq7.25}
+        P\left(N_{j}, N_{k}\right)=Y\left(N_{T, j k}, V_{T, j k}\right)\left(\frac{V_{j}^{N_{j}}}{N_{j} !}\right)\left(\frac{V_{k}^{N_{k}}}{N_{k} !}\right) .
+    \end{equation}
+    这就给出了不可分辨粒子的概率分布，还差归一化常数$Y\left(N_{T, j k}, V_{T, j k}\right)$。
+
+    很明显，在式(\ref{eq7.25})中不可区分粒子下$P(N_j,N_k)$对于其自变量的关系与式(\ref{eq4.4})中可区分粒子的情况一模一样。这就意味着我们可以通过与式(\ref{eq3.47})中归一化的二项分布式对比得出本式的归一化系数：
+    \begin{equation}\label{eq7.26}
+        Y\left(N_{T, j k}, V_{T, j k}\right)=\frac{N_{T, j k} !}{V_{T, j k}^{N_{T, j k}}}
+    \end{equation}
+    不可分辨粒子完整的概率分布可以通过将式(\ref{eq7.26})代入式(\ref{eq7.25})得出，
+    \begin{equation}
+        P\left(N_{j}, N_{k}\right)=\frac{N_{T, j k} !}{V_{T, j k}^{N_{T, j k}}}\left(\frac{V_{j}^{N_{j}}}{N_{j} !}\right)\left(\frac{V_{k}^{N_{k}}}{N_{k} !}\right) .
+    \end{equation}
+    这个表达式与式(\ref{eq4.4})中对于不可分辨粒子的概率分布类似。
+
+    因为熵由概率分布的对数给出，故经典理想气体的熵对于可分辨与不可分辨粒子是完全相同的。
+
+    \begin{mdframed}[backgroundcolor=lightgray,hidealllines=true]
+    对于具有可区分和不可区分粒子的经典系统，两者熵完全相同的结果可能会让一些读者感到惊讶，因为过去一个世纪的大多数文献都声称它们是不同的。我认为这两个模型具有相同的熵，这在很大程度上取决于熵与概率分布的关系。
+    然而，我认为我们可以把具有相同属性的两个模型应该具有相同的熵作为一个一般原则。由于概率分布是相同的，它们的性质也是相同的。我们很难解释对于具有相同属性的两个模型，如何定义熵才能导致两者的熵不同。
+    \end{mdframed}
+    \subsection{含有相互作用粒子的复合系统的熵}
+    到此为止，我们仅仅考虑了不含粒子间相互作用的理想气体。在实际气体中，粒子事实上有相互作用；粒子可以互相吸引以形成液体，也可以互相排斥，使液体难以压缩。
+    \begin{figure}[ht]
+        \centering
+        \includegraphics{fig7.1.jpg}
+        \caption{一种典型原子势的示意图。电势$\varphi(r)$仅在零到几纳米内显著变化。}
+        \label{fig7.1}
+    \end{figure}
+    图\ref{fig7.1}表示了一种典型的原子间势，其仅在零开始的一小段距离内有着显著变化。
+
+    尽管原子间势的范围很短，但它们可以产生重要的影响，包括液相和固相的形成，以及它们之间的相变。我们将在第19章和第31章中回到这个主题。
+
+    为了将我们对经典理想气体熵的分析推广到具有相互作用的粒子，可以返回并重新推导理想气体的熵，而不需要利用位置和动量的独立性。我们的基本假设与复合系统的约束一致，仍然假设相空间中的均匀概率分布。
+    \subsubsection{理想气体的重新讨论}
+    我们从第\ref{sec1.4}小节的讨论开始，假设相空间中的概率分布在约束之下是均匀的。物理上的约束有：
+    \begin{enumerate}
+        \item 子系统$j$中有$N_j$个粒子，子系统$k$中有$N_k$个粒子。
+        \item 子系统$j$的能量为$E_j$，子系统$k$中的能量为$E_k$。
+    \end{enumerate}
+
+    我们可以将$P\left(E_{j}, V_{j}, N_{j} ; E_{k}, V_{k}, N_{k}\right)$的最终结果写成整个相空间的积分，并像以前一样使用狄拉克$\delta$函数施加能量约束，而不用分别对构型和动量进行积分。这并没有简化理想气体的问题，但它将使推广到真实气体更容易。
+
+    计算每个子系统的能量、体积和粒子数的概率分布很简单，但表达式会有点笨拙。虽然把表达式写满两块或三块黑板以便学生看到它的整体十分有趣，但一本书的局限性使它很难完全写出。为了使其能看，我们将使用之前用于相空间积分的紧凑表示法。子系统$\alpha$中粒子位置上的$3N\alpha$维积分将表示为$\int dq_\alpha$，对于其他变量也类似。
+
+    写下子系统$\alpha$的哈密顿量：
+    \begin{equation}
+        H_{\alpha}\left(q_{\alpha}, p_{\alpha}\right)=\sum_{i=1}^{3 N_{\alpha}} \frac{\left|\vec{p}_{\alpha, i}\right|^{2}}{2 m}
+    \end{equation}
+    其中$\alpha=j\text{或}k$表示子系统。为了使标记更加紧凑，我们使用$H_\alpha$来表示$H_\alpha(q_\alpha,p_\alpha)$.
+
+    每个子系统的能量，体积与粒子数的边缘概率就可以通过对于整个空间积分得到：
+    \begin{equation}\label{eq7.29}
+        \begin{gathered}
+        P\left(E_{j}, V_{j}, N_{j} ; E_{k}, V_{k}, N_{k}\right)= \\
+        \frac{N_{T, j k} !}{N_{j} ! N_{k} !} \frac{\int d q_{j} \int d p_{j} \int d q_{k} \int d p_{k} \delta\left(E_{j}-H_{j}\right) \delta\left(E_{k}-H_{k}\right)}{\int d q \int d p \delta\left(E_{T, j k}-H_{T, j k}\right)} .
+        \end{gathered}
+        \end{equation}
+
+    因为两个子系统的粒子之间并不互相作用，式(\ref{eq7.29})可以通过引入以下函数写成一种更紧凑的形式
+    \begin{equation}\label{eq7.30}
+        \Omega_{\alpha}\left(E_{\alpha}, V_{\alpha}, N_{\alpha}\right)=\frac{1}{h^{3 N_{\alpha}} N_{\alpha} !} \int d q_{\alpha} \int d p_{\alpha} \delta\left(E_{\alpha}-H_{\alpha}\left(q_{\alpha}, p_{\alpha}\right)\right)
+        \end{equation}
+    其中我们为了区分，写作了$H_\alpha(q_\alpha,p_\alpha)$。注意到我们在$\Omega_\alpha$的表达式中引入了因子$h^{-3N_\alpha}$.这个因子在经典范围内并不必要，但仍然允许加入，因为我们始终可以把式(\ref{eq7.29})的右侧乘以$1=h^{N_{T, j k}} / h^{N_{j}} h^{N_{k}}$。
+    我们后面会看到这个简单的修改可以使理想气体的经典结果与量子理想气体取经典极限的结果一致。
+
+    有了这样的标记，式\ref{eq7.29}就变成了：
+    \begin{equation}\label{eq7.31}
+        P\left(E_{j}, V_{j}, N_{j} ; E_{k}, V_{k}, N_{k}\right)=\frac{\Omega_{j}\left(E_{j}, V_{j}, N_{j}\right) \Omega_{k}\left(E_{k}, V_{k}, N_{k}\right)}{\Omega\left(E_{T, j k}, V_{T, j k}, N_{T, j k}\right)}
+        \end{equation}
+    类似于式(\ref{eq4.17})<取式(\ref{eq7.31})中概率分布的对数，就可以得到复合系统熵的表达式，
+    \begin{equation}\label{eq7.32}
+        \begin{aligned}
+        S_{\text {tot }}\left(E_{j}, V_{j}, N_{j} ; E_{k}, V_{k}, N_{k}\right) &=k \ln \left[P\left(E_{j}, V_{j}, N_{j} ; E_{k}, V_{k}, N_{k}\right)\right]+S\left(E_{T, j k}, V_{T, j k}, N_{T, j k}\right) \\
+        &=S_{j}\left(E_{j}, V_{j}, N_{j}\right)+S_{k}\left(E_{k}, V_{k}, N_{k}\right) .
+        \end{aligned}
+        \end{equation}
+    （我们忽略了一个加法的系数，因为其没有物理含义。）
+
+    孤立系统的熵就是$\Omega$的对数：
+    \begin{equation}
+        S(E, V, N)=k \ln \Omega(E, V, N)
+        \end{equation}
+    其中$E,V,N$依然是通用的变量，可以代表子系统$j$，子系统$k$，或者整个复合系统。
+    式(\ref{eq7.32})表示理想气体的熵是可加的。但这个经典理想气体熵的表达式与式(\ref{eq7.2})是否相同（包括式(\ref{eq7.3})中的常数$X$）将会留作练习。
+
+    注意到我们在式(\ref{eq7.30})中引入了一个新的常数$h$。很容易验证对于$h$的任何值，概率分布的这个表达式仍然等价于式(\ref{eq7.29}，因此这个新常数是完全任意的，也在经典统计力学中没有意义。
+    它的引入完全是为了确保与量子统计力学的一致性。值得注意的是，选择$h$作为普朗克常数与量子统计力学取经典极限的结果相一致。目前这可能看起来相当神秘，但当我们在第27、28和29章中回到这个问题时，它将变得更加清晰。
+
+    \subsubsection{将熵推广到相互作用粒子}
+    
+
 
 
 
