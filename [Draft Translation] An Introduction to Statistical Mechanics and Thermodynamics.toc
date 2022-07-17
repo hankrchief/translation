@@ -86,6 +86,6 @@
 \contentsline {subsection}{\numberline {7.6}含有相互作用粒子的复合系统的熵}{65}{subsection.7.6}%
 \contentsline {subsubsection}{\numberline {7.6.1}理想气体的重新讨论}{66}{subsubsection.7.6.1}%
 \contentsline {subsubsection}{\numberline {7.6.2}将熵推广到相互作用粒子}{67}{subsubsection.7.6.2}%
-\contentsline {section}{\numberline {8}温度，压强，化学式以及其他}{68}{section.8}%
-\contentsline {section}{第II部分\hskip 1em\relax 热力学}{69}{section*.12}%
-\contentsline {section}{\numberline {9}热力学定律与假设}{69}{section.9}%
+\contentsline {section}{\numberline {8}温度，压强，化学式以及其他}{69}{section.8}%
+\contentsline {section}{第II部分\hskip 1em\relax 热力学}{70}{section*.12}%
+\contentsline {section}{\numberline {9}热力学定律与假设}{70}{section.9}%

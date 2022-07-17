@@ -2458,7 +2458,40 @@
     它的引入完全是为了确保与量子统计力学的一致性。值得注意的是，选择$h$作为普朗克常数与量子统计力学取经典极限的结果相一致。目前这可能看起来相当神秘，但当我们在第27、28和29章中回到这个问题时，它将变得更加清晰。
 
     \subsubsection{将熵推广到相互作用粒子}
-    
+    我们不需要对相空间中概率分布的基本假设进行任何更改，就可以得到具有相互作用粒子的系统的熵。在复合系统的物理约束下，我们仍然假设相空间中存在均匀的概率分布。唯一的区别是能量现在包括相互作用项。然而，由于一个子系统中的一个分子可能与另一个子系统中的一个分子相互作用，因此复合系统的熵可分为每个子系统的熵之和的性质不再是显而易见的。
+
+    我们先将包含子系统$j$和$k$的复合系统的哈密顿量写作每个粒子项之和：
+    \begin{equation}
+    H_{T, j k}(q, p)=\sum_{i=1}^{N_{T, j k}} \frac{\left|\vec{p}_{i}\right|^{2}}{2 m}+\sum_{i=1}^{N_{T, j k} N_{T, j k}} \sum_{i^{\prime}>i} \phi\left(\vec{r}_{i}, \vec{r}_{i^{\prime}}\right)
+    \end{equation}
+    或
+    \begin{align}\label{eq7.35}
+    H_{T, j k}(q, p)&=\sum_{i=1}^{N_{j}} \frac{\left|\vec{p}_{j, i}\right|^{2}}{2 m}+\sum_{\ell=1}^{N_{k}} \frac{\left|\vec{p}_{k, \ell}\right|^{2}}{2 m}
+    &+\sum_{i=1}^{N_{j}} \sum_{i^{\prime}>i}^{N_{j}} \phi\left(\vec{r}_{j, i}, \vec{r}_{j, i^{\prime}}\right)+\sum_{\ell=1}^{N_{k}} \sum_{\ell^{\prime}>\ell}^{N_{k}} \phi\left(\vec{r}_{k, \ell}, \vec{r}_{k, \ell^{\prime}}\right) \\
+    &+\sum_{i=1}^{N_{j}} \sum_{\ell=1}^{N_{k}} \phi\left(\vec{r}_{j, i}, \vec{r}_{k, \ell}\right) .
+    \end{align}
+    这个式子写作两种形式。首先，其写作单个复合系统，然后其被分割成代表不同子系统的小部分。式(\ref{eq7.35})右侧的最后一项代表不同子系统粒子之间的相互作用。这项导致我们难以将复合系统的熵分离为子系统的熵之和。
+
+    我们可以定义子系统$j$的哈密顿量：
+    \begin{equation}
+        H_{j}\left(q_{j}, p_{j}\right)=\sum_{i=1}^{N_{j}} \frac{\left|\vec{p}_{j, i}\right|^{2}}{2 m}+\sum_{i=1}^{N_{j}} \sum_{i^{\prime}>i}^{N_{j}} \phi\left(\vec{r}_{j, i}, \vec{r}_{j, i^{\prime}}\right) .
+    \end{equation}
+    关于位置的第二个求和中$i^{\prime}\leq i$的限制是为了防止重复计数。
+
+    类似的，我们可以定义子系统$k$的哈密顿量：
+    \begin{equation}
+        H_{k}\left(q_{k}, p_{k}\right)=\sum_{\ell=1}^{N_{k}} \frac{\left|\vec{p}_{k, \ell}\right|^{2}}{2 m}+\sum_{\ell=1}^{N_{k}} \sum_{\ell^{\prime}>\ell}^{N_{k}} \phi\left(\vec{r}_{k, \ell}, \vec{r}_{k, \ell^{\prime}}\right)
+    \end{equation}
+    然而，由于链接两个子系统的哈密顿量，
+    \begin{equation}
+        H_{j k}\left(q_{j}, q_{k}\right)=\sum_{j=1}^{N_{j}} \sum_{\ell=1}^{N_{k}} \phi\left(\vec{r}_{j, i}, \vec{r}_{k, \ell}\right)
+    \end{equation}
+    总哈密顿量并不只是$H_j$与$H_k$的综合：
+    \begin{equation}
+        H_{T, j k}(q, p)=H_{j}\left(q_{j}, p_{j}\right)+H_{k}\left(q_{k}, p_{k}\right)+H_{j k}\left(q_{j}, q_{k}\right) .
+    \end{equation}
+    所幸与系统的大小相比，大多数材料中分子之间（或胶体中粒子之间）的相互作用范围较短。因此，对$H_{jk}$的贡献仅对彼此接近的不同子系统中的分子重要。由于分子相互作用的范围只有几纳米，这意味着只有非常靠近两个子系统之间界面的成对分子才起作用。
+    因此，与不同系统中分子之间的直接相互作用相对应的能量与界面的大小成正比，界面的大小随每个系统中的表面积或$V_\alpha^{2/3}$而变化。
 
 
 
