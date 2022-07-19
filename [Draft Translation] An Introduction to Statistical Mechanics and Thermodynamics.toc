@@ -87,6 +87,9 @@
 \contentsline {subsubsection}{\numberline {7.6.1}理想气体的重新讨论}{66}{subsubsection.7.6.1}%
 \contentsline {subsubsection}{\numberline {7.6.2}将熵推广到相互作用粒子}{67}{subsubsection.7.6.2}%
 \contentsline {subsection}{\numberline {7.7}热力学第二定律}{69}{subsection.7.7}%
-\contentsline {section}{\numberline {8}温度，压强，化学式以及其他}{70}{section.8}%
-\contentsline {section}{第II部分\hskip 1em\relax 热力学}{71}{section*.12}%
-\contentsline {section}{\numberline {9}热力学定律与假设}{71}{section.9}%
+\contentsline {subsection}{\numberline {7.8}系统之间的平衡}{70}{subsection.7.8}%
+\contentsline {subsection}{\numberline {7.9}热力学第零定律}{70}{subsection.7.9}%
+\contentsline {subsection}{\numberline {7.10}习题}{71}{subsection.7.10}%
+\contentsline {section}{\numberline {8}温度，压强，化学式以及其他}{72}{section.8}%
+\contentsline {section}{第II部分\hskip 1em\relax 热力学}{73}{section*.12}%
+\contentsline {section}{\numberline {9}热力学定律与假设}{73}{section.9}%

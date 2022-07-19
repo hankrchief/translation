@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.4.1)  19 JUL 2022 09:55
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.4.1)  19 JUL 2022 22:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1111,17 +1111,17 @@ Missing character: There is no ， in font [lmroman10-regular]:mapping=tex-text;
  [40] [41
 
 ] [42] [43] [44]
-Underfull \hbox (badness 10000) in paragraph at lines 1593--1594
+Underfull \hbox (badness 10000) in paragraph at lines 1592--1593
 
  []
 
 [45] [46] [47]
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1727
+Underfull \hbox (badness 10000) in paragraph at lines 1724--1726
 
  []
 
 [48] [49] [50]
-Underfull \hbox (badness 10000) in paragraph at lines 1866--1868
+Underfull \hbox (badness 10000) in paragraph at lines 1865--1867
 
  []
 
@@ -1131,34 +1131,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 1866--1868
 
 ] [61] [62] [63]
 
-LaTeX Warning: Reference `sec8.7' on page 64 undefined on input line 2337.
+LaTeX Warning: Reference `sec8.7' on page 64 undefined on input line 2336.
 
 [64]
 File: fig7.1.jpg Graphic file (type bmp)
 <fig7.1.jpg>
- [65] [66] [67] [68] [69] [70
+ [65] [66] [67] [68] [69] [70] [71] [72
 
-] [71
+] [73
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2553.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2553.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2637.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2637.
  (./[Draft Translation] An Introduction to Statistical Mechanics and Thermodynamics.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2553.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2553.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2637.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2637.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2553.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2637.
  ) 
 Here is how much of TeX's memory you used:
- 32801 strings out of 479418
- 702952 string characters out of 5888106
- 1196014 words of memory out of 5000000
- 49729 multiletter control sequences out of 15000+600000
+ 32844 strings out of 479418
+ 705146 string characters out of 5888106
+ 1195350 words of memory out of 5000000
+ 49772 multiletter control sequences out of 15000+600000
  545297 words of font info for 119 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  60i,14n,68p,1033b,2247s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on [Draft Translation] An Introduction to Statistical Mechanics and Thermodynamics.pdf (71 pages).
+Output written on [Draft Translation] An Introduction to Statistical Mechanics and Thermodynamics.pdf (73 pages).
