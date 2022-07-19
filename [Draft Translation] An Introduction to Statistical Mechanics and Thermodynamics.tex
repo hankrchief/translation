@@ -2487,12 +2487,56 @@
         H_{j k}\left(q_{j}, q_{k}\right)=\sum_{j=1}^{N_{j}} \sum_{\ell=1}^{N_{k}} \phi\left(\vec{r}_{j, i}, \vec{r}_{k, \ell}\right)
     \end{equation}
     总哈密顿量并不只是$H_j$与$H_k$的综合：
-    \begin{equation}
+    \begin{equation}\label{eq7.39}
         H_{T, j k}(q, p)=H_{j}\left(q_{j}, p_{j}\right)+H_{k}\left(q_{k}, p_{k}\right)+H_{j k}\left(q_{j}, q_{k}\right) .
     \end{equation}
     所幸与系统的大小相比，大多数材料中分子之间（或胶体中粒子之间）的相互作用范围较短。因此，对$H_{jk}$的贡献仅对彼此接近的不同子系统中的分子重要。由于分子相互作用的范围只有几纳米，这意味着只有非常靠近两个子系统之间界面的成对分子才起作用。
     因此，与不同系统中分子之间的直接相互作用相对应的能量与界面的大小成正比，界面的大小随每个系统中的表面积或$V_\alpha^{2/3}$而变化。
+    
+    就粒子数而言，子系统$\alpha$中的分子与不同子系统的分子直接相互作用的贡献与$N_\alpha^{2/3}$成正比。相对于子系统$\alpha$中所有分子的比例，就是$N_{\alpha}^{2 / 3} / N_{\alpha}=N_{\alpha}^{-1 / 3}$。然而，在另一个子系统$\alpha'$中离表面接近的分子的比例也是$N_{\alpha '}'^{-1/3}$。
+    这就使表面对于粒子总共效果的量级在$N_\alpha^{-1/3}N_{\alpha'}^{-1/3}$。如果$N_\alpha$与$N_{\alpha'}$的量级都在$10^{21}$，那么相互作用项的量级大约在$N_\alpha^{-1/3}N_{\alpha'}^{-1/3}\approx 10^{-7}10^{-7}=10^{14}$。因此，忽略不同子系统之间的相互作用项是一个很好的近似。
 
+    在式(\ref{eq7.39})中忽略项$H_{jk}$后，我们又可以将联合概率写作两项的和，同式(\ref{eq7.29})。此处的不同在于哈密顿量只包含相同系统中粒子的相互作用，
+    \begin{equation}
+        \begin{array}{c}
+            P\left(E_{j}, V_{j}, N_{j} ; E_{k}, V_{k}, N_{k}\right)= \\
+            \frac{N_{T, j k} !}{N_{j} ! N_{k} !} \frac{\int d q_{j} \int d p_{j} \int d q_{k} \int d p_{k} \delta\left(E_{j}-H_{j}\right) \delta\left(E_{k}-H_{k}\right)}{\int d q \int d p \delta\left(E_{T, j k}-H_{T, j k}\right)}
+            \end{array}
+    \end{equation}
+    或：
+    \begin{equation}\label{eq7.41}
+        \begin{array}{c}
+            P\left(E_{j}, V_{j}, N_{j} ; E_{k}, V_{k}, N_{k}\right)= \\
+            \frac{N_{T, j k} !}{N_{j} ! N_{k} !} \frac{\int d q_{j} \int d p_{j} \delta\left(E_{j}-H_{j}\right) \int d q_{k} \int d p_{k} \delta\left(E_{k}-H_{k}\right)}{\int d q \int d p \delta\left(E_{T, j k}-H_{T, j k}\right)} .
+            \end{array}
+    \end{equation}
+    可以通过引入$\Omega$函数来明确式(\ref{eq7.41})中的因子，
+    \begin{equation}
+        \Omega_{\alpha}\left(E_{\alpha}, V_{\alpha}, N_{\alpha}\right)=\frac{1}{h^{3 N_{\alpha}} N_{\alpha} !} \int d q_{\alpha} \int d p_{\alpha} \delta\left(E_{\alpha}-H_{\alpha}\right)
+    \end{equation}
+    并写出：
+    \begin{equation}
+        P\left(E_{j}, V_{j}, N_{j} ; E_{k}, V_{k}, N_{k}\right)=\frac{\Omega_{j}\left(E_{j}, V_{j}, N_{j}\right) \Omega_{k}\left(E_{k}, V_{k}, N_{k}\right)}{\Omega\left(E_{T, j k}, V_{T, j k}, N_{T, j k}\right)} .
+    \end{equation}
+    像之前一样，下标$\alpha$可以代为$j$或$k$来代表子系统，也可以代为$T,jk$来代表整个系统。参数$h$仍然在经典统计力学中是任意的。也如上所述，$h$也可以在第27,28与29章明确写为普朗克常数，来确保与相对应的量子系统中的经典极限所一致。
+
+    现在，我们已经将相互作用经典粒子的概率分布表示为项的乘积，我们可以通过取对数并将其乘以常数$k$来定义熵。结果与理想气体的式(\ref{eq7.32})的形式相同，
+    \begin{equation}
+        \begin{aligned}
+            S_{t o t}\left(E_{j}, V_{j}, N_{j} ; E_{k}, V_{k}, N_{k}\right) &=k \ln \left[P\left(E_{j}, V_{j}, N_{j} ; E_{k}, V_{k}, N_{k}\right)\right]+S\left(E_{T, j k}, V_{T, j k}, N_{T, j k}\right) \\
+            &=S_{j}\left(E_{j}, V_{j}, N_{j}\right)+S_{k}\left(E_{k}, V_{k}, N_{k}\right)
+            \end{aligned}
+    \end{equation}
+    单个系统的熵也可以由$\Omega$函数的对数给出，
+    \begin{equation}
+        \begin{aligned}
+            S_{\alpha}\left(E_{\alpha}, V_{\alpha}, N_{\alpha}\right) &=k \ln \Omega_{\alpha}\left(E_{\alpha}, V_{\alpha}, N_{\alpha}\right) \\
+            &=k \ln \left[\frac{1}{h^{3 N_{\alpha}} N_{\alpha} !} \int d q_{\alpha} \int d p_{\alpha} \delta\left(E_{\alpha}-H_{\alpha}\right)\right]
+            \end{aligned}
+    \end{equation}
+    现在哈密顿量$H_j$与$H_k$就包括了系统内部的相互作用。
+    \subsection{热力学第二定律}
+    
 
 
 

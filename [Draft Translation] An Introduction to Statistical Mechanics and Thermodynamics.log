@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.4.1)  17 JUL 2022 22:27
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.4.1)  19 JUL 2022 09:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1136,29 +1136,29 @@ LaTeX Warning: Reference `sec8.7' on page 64 undefined on input line 2337.
 [64]
 File: fig7.1.jpg Graphic file (type bmp)
 <fig7.1.jpg>
- [65] [66] [67] [68] [69
+ [65] [66] [67] [68] [69] [70
 
-] [70
+] [71
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2509.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2509.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2553.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2553.
  (./[Draft Translation] An Introduction to Statistical Mechanics and Thermodynamics.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2509.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2509.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2553.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2553.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2509.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2553.
  ) 
 Here is how much of TeX's memory you used:
- 32798 strings out of 479418
- 702930 string characters out of 5888106
- 1195930 words of memory out of 5000000
- 49726 multiletter control sequences out of 15000+600000
+ 32801 strings out of 479418
+ 702952 string characters out of 5888106
+ 1196014 words of memory out of 5000000
+ 49729 multiletter control sequences out of 15000+600000
  545297 words of font info for 119 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  60i,14n,68p,1033b,2247s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on [Draft Translation] An Introduction to Statistical Mechanics and Thermodynamics.pdf (70 pages).
+Output written on [Draft Translation] An Introduction to Statistical Mechanics and Thermodynamics.pdf (71 pages).
