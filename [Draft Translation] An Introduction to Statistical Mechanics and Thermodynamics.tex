@@ -2577,7 +2577,7 @@
         \frac{\partial S_{j}}{\partial N_{j}}=\frac{\partial S_{k}}{\partial N_{k}}
         \end{equation}
     最后三个方程既提供了解决问题的方法，也为建立统计力学和热力学之间的联系提供了基础。这些导数与我们熟悉的量（如温度和压力）之间的明确关系将是下一章的主题。然而，这些方程的首个也是可以说是最重要的结果将在下一节中介绍。
-    \subsection{热力学第零定律}
+    \subsection{热力学第零定律}\label{sec7.9}
     式(\ref{eq7.49})，(\ref{eq7.50})与(\ref{eq7.51})的直接推论是，如果两个系统各自与第三个系统平衡，则它们也必须彼此平衡。
 
     假设系统$j$和$k$关于能量处于平衡状态，则式(\ref{eq7.49})成立。如果系统$k$和$l$关于能量也处于平衡状态，那么我们对于$S_k$和$S_l$对于能量的偏导数就会有一个类似的方程，
@@ -2625,7 +2625,130 @@
     \textit{验证两个物体温度相等最简单的方法，就是其在热接触时仍然均保持平衡态。}
     \\
     \rightline{J·威拉得·吉布斯}
-    在本章中我们会讨论温度$T$，压强$P$，与化学势$\mu$。
+    在本章中我们会讨论温度$T$，压强$P$，与化学势$\mu$。我们会找出这三个量的显式表达式，写作熵关于能量，体积以及粒子数的偏导数。这样，我们便完成了经典统计力学的基础建构。
+
+    在第\hyperref[part2]{第II部分}开始的第\ref{chap9}章中，我们会看到统计力学是如何引出一组为热力学奠定基础的假设的。第二部分的其余章节从这些假设出发发展了热力学理论。
+
+    在第III部分我们将回到经典统计力学。虽然\hyperref[part1]{第I部分}中导出的方程（在我看来）是理解统计力学假设的最清晰的方法，但第III部分中开发的新方法对于实际计算来说将会更强大。
+    \subsection{热力学平衡}
+    我们在第\ref{sec7.9}节中看到，如果两个物体彼此处于热平衡（关于能量交换的平衡），那么熵关于能量的偏导数在两个系统中必须具有相同的值。我们还知道，如果两个系统处于热平衡，它们必须处于相同的温度。因此，熵对能量的偏导数必须是温度的唯一函数。本章的目的之一是确定该函数的表达式。
+
+    在我们确定了温度和熵对能量偏导数之间的关系之后，我们将导出熵的其他偏导数与压力和化学势之间的类似关系。
+
+    连接$T$、$P$和$\mu$与熵偏导数的关系将适用于所有系统的任意情况。这是一个非常强大的表述。这意味着，如果我们可以计算以$E$、$V$和$N$作为自变量的熵的函数，我们就可以计算系统的所有热力性质。因此，熵是能量、体积和粒子数的函数，
+    \begin{equation}\label{eq8.1}
+        S=S(E, V, N)
+    \end{equation}
+    其被称为“基本关系式”。我们稍后将看到，还有许多其他函数也包含关于系统的相同、完整的热力学信息，这使得它们等效于式(\ref{eq8.1})。这些函数也是基本关系的另外表达。
+    \subsection{当我们谈论温度时，我们在谈论什么？}
+    对我们大多数人来说，温度是我们从温度计上获得的读数。温度计的基本特性是当它被加热或冷却时，其经历了某种可以测量的物理变化。最易得的温度计是我们自己的身体。它冷的时候会发抖，热的时候会出汗。这些都是主观测量，但它们确实构成了我们直观理解温度的基础。
+
+    为了使温度的定义客观化，我们需要选择能够提供理论和实验标准以及数值尺度的东西。为此，我们将使用理想气体。由于我们可以计算理想气体的所有性质，我们可以确定其体积或压力在加热或冷却时各种性质的变化。因为我们可以在稀释后的实际气体上做实验，我们可以将温度的定义与真实世界联系起来。
+
+    我们将用来唯一定义热力学温度的基本方程是理想气体定律：
+    \begin{equation}\label{eq8.2}
+        PV=Nk_B T
+    \end{equation}
+    压力$P$定义为单位面积下的平均力。常数$k_B$成为玻尔兹曼常数。其单位为焦尔每度，并将温度与能量量度联系起来。式(\ref{eq8.2})经常写作：
+    \begin{equation}
+        PV=nRT
+    \end{equation}
+    其中$n=N/N_A$为一摩尔所含数量（$N_A=6.0221415\times 10^{23}$，即阿伏伽德罗常数，以夸雷尼亚与切雷托伯爵、意大利科学家阿伏伽德罗命名），$R=N_A k_B$被称为理想气体常数。
+    通过实验已得出温度与定容压力成正比，或与定压体积成正比，这与我们认为气体受热时膨胀或其压力升高的概念相吻合。
+
+    虽然理想气体定律在实验上是众所周知的，但为了与熵联系起来，我们必须从前面章节中得到的理想气体的特性中推导出来。我们在下一节实际要做的是证明比值$PV/N$等于热源的某个特性，然后使用式(\ref{eq8.2})将该特性与温度相关联。这个推导将给出温度和$\partial S/\partial E$之间的普遍关系。
+    \subsection{理想气体定律的导出}
+    推导理想气体定律的第一步是推导出单个理想气体粒子动量概率密度的麦克斯韦-玻尔兹曼方程(Maxwell-Boltzmann Equation)。然后，我们将使用这个概率密度来确定由于包含理想气体的壁面上的碰撞而产生的压力。这将引导我们得出理想气体定律，并根据熵对能量的偏导数定义温度。
+    \subsubsection{麦克斯韦-玻尔兹曼方程}
+    我们对理想气体中单个粒子的性质感兴趣，并且选择哪个粒子无关紧要，因为它们都具有相同的概率密度。我们可以发现，概率密度是相空间中全概率密度的边缘概率。如果系统的总能量为$E$，则全概率密度可以得出：
+    \begin{equation}\label{eq8.4}
+        P(p, q)=\frac{1}{\Omega(E, V, N)} \frac{1}{h^{3 N} N !} \delta(E-H(p, q))
+    \end{equation}
+    其中
+    \begin{equation}
+        \Omega(E, V, N)=\frac{1}{h^{3 N} N !} \int d p \int d q \delta(E-H(p, q))
+    \end{equation}
+    其中我们使用了紧凑的形式$p=\left\{\vec{p}_{i} \mid i=1,2, \ldots, N\right\}$与$q=\left\{\vec{r}_{i} \mid i=1,2, \ldots, N\right\}$。
+
+    首先我们推导出粒子$1$动量与位置的边缘概率密度，将式(\ref{eq8.4})中的$P(p,q)$关于除了$\vec{p_1}$与$\vec{r_1}$以外的所有变量积分可以得出：
+    \begin{equation}\label{eq8.6}
+        \begin{aligned}
+            P\left(\vec{p}_{1}, \vec{r}_{1}\right) &=\int d^{3} p_{2} \ldots d^{3} p_{N} \int d^{3} r_{2} \ldots d^{3} r_{N} P(p, q) \\
+            &=\frac{1}{\Omega(E, V, N)} \frac{1}{h^{3 N} N !} \int d^{3} p_{2} \ldots d^{3} p_{N} \int d^{3} r_{2} \ldots d^{3} r_{N} \delta\left(E-H_{N}(p, q)\right) .
+            \end{aligned}
+    \end{equation}
+    在式(\ref{eq8.6})中，$H_N$是$N$粒子系统的哈密顿量。
+
+    对于具有$N-1$个粒子的系统，我们可以将式(\ref{eq8.6})中的积分写作函数$\Omega$的函数，
+    \begin{equation}
+        \begin{aligned}
+            \Omega\left(E-\left|\vec{p}_{1}\right|^{2} / 2 m, V, N-1\right)=& \frac{1}{h^{3(N-1)}(N-1) !} \int d p_{2} \ldots d p_{3 N} \\
+            & \times \int d^{3} r_{2} \ldots d^{3} r_{N} \delta\left(E-\left|\vec{p}_{1}\right|^{2} / 2 m-\sum_{i=2}^{3 N} p_{i}^{2} / 2 m\right)
+            \end{aligned}
+    \end{equation}
+    注意到能量项$|\vec{p_1}|^2/2m$从余下的哈密顿量中分离开了，因为其未被积分。使用这样的记号，式(\ref{eq8.6})可以写作更加紧凑的形式，
+    \begin{equation}
+        P\left(\vec{p}_{1}, \vec{r}_{1}\right)=\frac{\Omega\left(E-\left|\vec{p}_{1}\right|^{2} / 2 m, V, N-1\right)}{N h^{3} \Omega(E, V, N)}
+    \end{equation}
+    因为$P\left(\vec{p}_{1}, \vec{r}_{1}\right)$并不是$\vec{r_1}$的显式函数，我们很容易将$\vec{r_1}$积分出来，得到：
+    \begin{equation}\label{eq8.9}
+        P\left(\vec{p}_{1}\right)=\frac{V}{N h^{3}} \frac{\Omega\left(E-\left|\vec{p}_{1}\right|^{2} / 2 m, V, N-1\right)}{\Omega(E, V, N)}
+    \end{equation}
+    我们希望利用$|\vec{p_1}^2/2m$与$E$相比非常小的事实。我们可以利用这一点，取式(\ref{eq8.9})两边的对数，将$|\vec{p_1}^2/2m$视为小的扰动，并仅保留主要项：
+    \begin{equation}\label{eq8.10}
+        \begin{aligned}
+            \ln P\left(\vec{p}_{1}\right)=& \ln \Omega\left(E-\left|\vec{p}_{1}\right|^{2} / 2 m, V, N-1\right) \\
+            &-\ln \Omega(E, V, N)+\ln \left(\frac{V}{N h^{3}}\right) \\
+            \approx & \ln \Omega(E, V, N-1)-\frac{\left|\vec{p}_{1}\right|^{2}}{2 m} \frac{\partial}{\partial E} \ln \Omega(E, V, N-1) \\
+            &-\ln \Omega(E, V, N)+\ln \left(\frac{V}{N h^{3}}\right)
+            \end{aligned}
+    \end{equation}
+    展开中的高阶项十分小，因为$|\vec{p_1}^2/2m$的平均值较$E$药效$N$的量级。
+
+    式(\ref{eq8.10})首先需要注意的是第二项只与$\vec{p_1}$有关。
+
+    式(\ref{eq8.10})其次需要注意的是以下近似：
+    \begin{equation}
+        \frac{\partial}{\partial E} \ln \Omega(E, V, N-1) \approx \frac{\partial}{\partial E} \ln \Omega(E, V, N)
+    \end{equation}
+    是十分准确的。相对误差尽在$1/N$的量级。
+
+    $ln\Omega$相对于能量的导数十分重要，以至于人们习惯将其以一个希腊字母$\beta$表示，
+    \begin{equation}
+        \beta \equiv \frac{\partial}{\partial E} \ln \Omega(E, V, N)
+        \end{equation}
+
+    我们现在就可以将式(\ref{eq8.10})写作一个更简单的形式：
+    \begin{equation}
+        \ln P\left(\vec{p}_{1}\right)=-\beta\left|\vec{p}_{1}\right|^{2} / 2 m+\text { 常数项, }
+        \end{equation}
+    其中“常数项”可能与$E$，$V$与$N$有关，但与$\vec{p_1}$无关。由于该方程中的常数由归一化条件确定，我们可以根据高斯积分性质的知识完成$P(\vec{p_1})$的推导：
+    \begin{equation}
+        P\left(\vec{p}_{1}\right)=\left(\frac{\beta}{2 \pi m}\right)^{3 / 2} \exp \left(-\beta \frac{\left|\vec{p}_{1}\right|^{2}}{2 m}\right)
+        \end{equation}
+        这就是单个粒子动量的麦克斯韦-玻尔兹曼概率密度。
+        \begin{mdframed}[backgroundcolor=lightgray,hidealllines=true]
+            在推导$P(\vec{p_1})$中所使用的展开在统计力学中十分有用。这是其在书中的首秀，但远不是最后一次出现。
+        \end{mdframed}
+    
+    注意动量的三个分量是独立的，所以单个分量的概率密度很容易通过对于剩下两个分量积分得到：
+        \begin{equation}
+            P\left(p_{1, x}\right)=\sqrt{\frac{\beta}{2 \pi m}} \exp \left(-\beta \frac{p_{1, x}^{2}}{2 m}\right)
+            \end{equation}
+    \subsubsection{理想气体的压强}
+    根据动量的麦克斯韦-玻尔兹曼概率密度分布，我们可以通过对时间$\Delta t$内发生的碰撞进行积分来计算压力。
+    
+    考虑具有面积$a$的理想气体容器壁的平坦部分。（我们并不需要平坦的假设，但这样会使推导更容易。）定义一个坐标系，使$x$轴垂直于壁。为了简化问题，请注意，粒子动量的$y$分量和$z$分量在与壁碰撞期间不会发生变化，因此它们不会将任何动量传递到壁上，也不会影响压力。这将计算简化为一维问题。
+
+    根据牛顿第二定律，在一个时间段$\Delta t$内作用在墙上的平均力由该时间段内传递到墙上的总动量得出：
+    \begin{equation}
+        F \Delta t=\int_{\text {collisions }} \Delta p_{x} P\left(p_{x}, \Delta t\right) d p_{x}
+    \end{equation}
+
+
+
+
+    
 
     \clearpage
     \section*{第II部分\quad 热力学}
